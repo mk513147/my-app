@@ -1,18 +1,14 @@
 import { useState } from 'react';
 import './App.css';
-import About from './Components/About';
+// import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
 import Alert from './Components/Alert';
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-  Router,
-  Routes,
-  BrowserRouter,
-} from "react-router-dom";
+// import {
+//   Route,
+//   Routes,
+//   BrowserRouter,
+// } from "react-router-dom";
 
 
 function App() {
@@ -65,16 +61,17 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Navbar title="Fiddle with texts" about="About" mod={changeMode} toggleModeDark={toggleModeDark} toggleModeRed={toggleModeRed} toggleModeGreen={toggleModeGreen} toggleModeBlue={toggleModeBlue} toggleModeLight={toggleModeLight} />
+      {/* <BrowserRouter> */}
+        <Navbar title="Fiddle with texts" about="About" mode={changeMode} toggleModeDark={toggleModeDark} toggleModeRed={toggleModeRed} toggleModeGreen={toggleModeGreen} toggleModeBlue={toggleModeBlue} toggleModeLight={toggleModeLight} />
         <Alert alert={alert} />
         <div className="container my-3">
-          <Routes>
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/home" element={<TextForm placeholder="Enter text to Start." mode={changeMode} showAlert={showAlert} />} />
-          </Routes>
+          {/* <Routes> */}
+            {/* <Route exact path="/about" element={<About />} /> */}
+            {/* <Route exact path="/home" element={<TextForm placeholder="Enter text to Start." mode={changeMode} showAlert={showAlert} />} /> */}
+            <TextForm placeholder="Enter text to Start." mode={changeMode} showAlert={showAlert} />
+          {/* </Routes> */}
         </div>
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
     </>
   );
 }
